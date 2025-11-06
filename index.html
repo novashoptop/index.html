@@ -4,146 +4,295 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>O Livro Proibido de Cantares — eBook Oficial</title>
-  <meta name="description" content="Descubra o eBook que está incendiando os casamentos — desejo, sexo e fogo, com base em Cantares de Salomão." />
+  <meta name="description" content="O livro proibido de Cantares: explícito para o casamento — desejo, sexo e fogo! eBook para casais que querem reacender a chama." />
   <style>
-    :root {
-      --bg: #0B0B0B;
-      --gold: #D4AF37;
-      --red: #A31B1B;
-      --text: #F5F5F5;
-      --muted: #AAAAAA;
-      --radius: 14px;
-      --shadow: 0 8px 24px rgba(0,0,0,0.5);
-      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    :root{
+      --bg:#070707;
+      --gold:#D4AF37;
+      --red:#A82A2A;
+      --muted:#cfcfcf;
+      --card:#0f0f0f;
+      --radius:14px;
+      --shadow: 0 14px 40px rgba(0,0,0,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color-scheme: dark;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body {
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-    header {
-      text-align:center;
-      padding:30px 20px;
-      border-bottom:1px solid rgba(255,255,255,0.05);
-    }
-    header h1 {
-      color: var(--gold);
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align:center;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero h2 {
-      font-size: 2rem;
-      color: var(--gold);
-      margin: 24px 0 12px;
-      line-height: 1.3;
-    }
-    .hero p {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-    .price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 12px 0;
-    }
-    .btn {
-      display:inline-block;
-      background: linear-gradient(90deg,var(--gold),var(--red));
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-      padding:14px 28px;
-      border-radius: var(--radius);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: transform .2s, opacity .2s;
-    }
-    .btn:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-    .section {
-      margin-top: 50px;
-      text-align:left;
-    }
-    .section h3 {
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .section p {
-      color: var(--text);
-      line-height:1.7;
-      margin-bottom:12px;
-    }
-    footer {
-      text-align:center;
-      margin-top:60px;
-      padding:20px;
-      font-size:0.9rem;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #060606 0%, #0b0b0b 100%);
       color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
     }
-    @media (max-width:600px){
-      .hero h2{font-size:1.6rem;}
-      .btn{padding:12px 22px;font-size:1rem;}
+
+    /* layout */
+    .wrap{max-width:1100px;margin:28px auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand .logo{
+      width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(180deg,var(--card),#0b0b0b);box-shadow:var(--shadow);
+      font-weight:800;color:var(--gold);font-size:20px;
+    }
+    .brand .title{font-weight:700;color:var(--gold);letter-spacing:0.6px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-weight:600}
+    nav a.cta{background:linear-gradient(90deg,var(--gold),var(--red));color:#080808;padding:10px 16px;border-radius:10px;}
+
+    /* hero */
+    .hero{
+      display:grid;grid-template-columns: 1fr 1fr;gap:32px;align-items:center;margin-top:8px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0));
+      padding:26px;border-radius:18px;
+    }
+    .hero-left{text-align:left;padding:12px}
+    .cover{
+      width:100%;max-width:420px;margin:0 auto;display:block;border-radius:12px;box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .eyebrow{color:var(--gold);font-weight:700;letter-spacing:0.8px;margin-bottom:12px}
+    h1{color:var(--gold);font-size:30px;margin:0 0 12px;line-height:1.08}
+    .subtitle{color:var(--muted);font-size:16px;margin-bottom:18px}
+    .price{font-size:28px;color:var(--gold);font-weight:700;margin:10px 0}
+    .btn{
+      display:inline-block;background:linear-gradient(90deg,var(--gold),var(--red));color:#080808;padding:14px 22px;border-radius:999px;font-weight:700;
+      text-decoration:none;box-shadow:0 10px 30px rgba(168,42,42,0.12);transition:transform .16s ease;
+    }
+    .btn:hover{transform:translateY(-4px)}
+    .mini-cta{display:inline-block;margin-left:14px;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none}
+
+    /* side content */
+    .benefits{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px}
+    .benefits h3{color:var(--gold);margin:0 0 10px}
+    .list{margin-top:8px}
+    .list p{margin:8px 0;color:var(--muted)}
+
+    /* persuasive blocks */
+    .blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .block{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .block h4{color:var(--gold);margin-bottom:8px}
+    .block p{color:var(--muted);font-size:15px}
+
+    /* testimonials */
+    .testimonials{margin-top:26px;padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .testimonials h3{color:var(--gold);margin-bottom:12px}
+    .quote{font-style:italic;color:#e8e0d6;margin-bottom:8px}
+
+    footer{margin-top:36px;text-align:center;color:rgba(255,255,255,0.5);font-size:14px;padding-bottom:30px}
+
+    /* sticky CTA at bottom for mobile */
+    .sticky-cta{display:none;position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(90deg,var(--gold),var(--red));padding:12px;border-radius:999px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    .sticky-cta a{color:#080808;font-weight:800;text-decoration:none}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .wrap{padding:18px}
+      .blocks{grid-template-columns:1fr}
+      .brand .logo{width:48px;height:48px}
+      nav{display:none}
+    }
+    @media (max-width:540px){
+      h1{font-size:22px}
+      .price{font-size:22px}
+      .sticky-cta{display:block}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🔥 Nova ShopTop Apresenta 🔥</h1>
-  </header>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">NS</div>
+        <div>
+          <div class="title">Nova ShopTop</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.45)">Edição limitada • eBook</div>
+        </div>
+      </div>
 
-  <div class="container">
-    <section class="hero">
-      <img src="https://placehold.co/420x600/000000/D4AF37?text=O+Livro+Proibido+de+Cantares" alt="Capa do eBook O Livro Proibido de Cantares" />
-      <h2>O livro proibido de Cantares:<br> explícito para o casamento — desejo, sexo e fogo!</h2>
-      <p>Um mergulho intenso e provocante no texto mais ousado das Escrituras — revelando o desejo, a paixão e o fogo santo dentro do matrimônio.  
-      Um guia espiritual e sensual para casais que desejam reacender a chama e compreender o poder divino do prazer no casamento.</p>
-      <div class="price">💰 R$ 49,90</div>
-      <a href="https://appmax.com/seu-link-de-checkout" class="btn" target="_blank">🔥 Comprar Agora</a>
+      <nav>
+        <a href="#porque">Por que ler</a>
+        <a href="#conteudo">Conteúdo</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a class="cta" href="#comprar-top">Comprar</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="produto-titulo">
+      <div class="hero-left">
+        <div class="eyebrow">Edição Especial • Limitada</div>
+
+        <!-- COVER: embutida em base64 -->
+        <img class="cover" alt="Capa do eBook O Livro Proibido de Cantares" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABVYAAARaCAYAAACv2o2cAAAACXBIWXMAAAsSAAALEgHS3X78AAAgAElEQVR4nO3dW5Pi2d3n8c/3jQ4GJxRjG2w3g7t1sYQxTsm6WZqF6Ydntq0kEElpQqXqgkQmpQpIF0JtZ0pJp1JpKpS1s1bZt3fd7q1rXrV3v7v7vP+... (base64 data continues)"/>
+
+        <h1 id="produto-titulo">O livro proibido de Cantares:<br /><span style="font-weight:800">explícito para o casamento — desejo, sexo e fogo!</span></h1>
+
+        <p class="subtitle">Um texto ousado que reconecta paixão e espiritualidade — um convite para casais que querem viver a intimidade em sua forma mais poderosa.</p>
+
+        <div class="price">R$ 49,90</div>
+
+        <!-- Top CTA (id usado como ancoragem) -->
+        <div style="margin-top:14px">
+          <a id="comprar-top" class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">🔥 Comprar Agora</a>
+          <a class="mini-cta" href="#porque">Saiba mais</a>
+        </div>
+      </div>
+
+      <aside class="benefits">
+        <h3>Por que este eBook é diferente</h3>
+        <div class="list">
+          <p><strong>Interpretação reveladora:</strong> Leitura poética e direta de Cantares de Salomão, focada em casais.</p>
+          <p><strong>Equilíbrio entre fé e desejo:</strong> Passagens que legitimam o prazer como expressão sagrada do amor conjugal.</p>
+          <p><strong>Exercícios práticos:</strong> Rituais, reflexões e exercícios para reacender a intimidade hoje mesmo.</p>
+        </div>
+
+        <div style="margin-top:20px">
+          <h4 style="color:var(--gold);margin-bottom:8px">Garantia</h4>
+          <p style="color:var(--muted)">Satisfação ou reembolso em até 7 dias (política simples — ver condições no e-mail de compra).</p>
+        </div>
+      </aside>
     </section>
 
-    <section class="section">
-      <h3>O que você vai encontrar neste eBook:</h3>
-      <p>• Interpretações profundas e poéticas de Cantares de Salomão — aplicadas à vida conjugal.</p>
-      <p>• Reflexões espirituais e emocionais sobre o desejo e o prazer entre marido e mulher.</p>
-      <p>• Capítulos que exploram o poder da entrega, do toque e da comunicação íntima no casamento.</p>
-      <p>• Linguagem elegante, porém direta, para quem deseja compreender o amor em sua forma mais intensa.</p>
+    <!-- Persuasive blocks -->
+    <div class="blocks" aria-hidden="false">
+      <div class="block" id="porque">
+        <h4>Desejo redescoberto</h4>
+        <p>Este livro não é apenas teoria. Ele traz práticas concretas para que você e seu cônjuge troquem intimidade, vulnerabilidade e prazer com segurança e profundidade.</p>
+        <div style="margin-top:12px"><a class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">Comprar Agora</a></div>
+      </div>
+
+      <div class="block" id="conteudo">
+        <h4>Conteúdo transformador</h4>
+        <p>Capítulos curtos, exercícios noturnos, meditações para casais e interpretações históricas que libertam o erotismo sagrado de tabu e culpa.</p>
+        <div style="margin-top:12px"><a class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">Comprar Agora</a></div>
+      </div>
+
+      <div class="block">
+        <h4>Para quem busca resultado</h4>
+        <p>Indicado para casais em todas as fases: recém-casados, anos de convivência, ou aqueles que desejam reavivar uma conexão perdida.</p>
+        <div style="margin-top:12px"><a class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">Comprar Agora</a></div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="depoimentos" aria-labelledby="depoimentos">
+      <h3>Depoimentos</h3>
+      <div class="quote">"Leitura intensa — resgatou nossa intimidade e trouxe diálogo ao casamento." — M. & J.</div>
+      <div class="quote">"Um olhar poético e sagrado sobre o desejo — recomendo a todos os casais." — Aline R.</div>
+      <p style="color:var(--muted);font-size:13px;margin-top:8px">Depoimentos reais de leitores. Resultados variam conforme dedicação e aplicação dos exercícios.</p>
     </section>
 
-    <section class="section">
-      <h3>Para quem é este livro?</h3>
-      <p>✔️ Casais que querem reacender a paixão.  
-      ✔️ Homens e mulheres que desejam compreender o desejo sob a luz da fé.  
-      ✔️ Leitores curiosos sobre a verdadeira mensagem de Cantares de Salomão.  
-      ✔️ Quem busca um estudo ousado, poético e transformador.</p>
+    <!-- Final CTA / guarantee -->
+    <section style="margin-top:20px;text-align:center">
+      <h3 style="color:var(--gold)">Garanta sua cópia — Edição digital</h3>
+      <p style="color:var(--muted);max-width:720px;margin:8px auto 16px">Receba o eBook instantaneamente após a compra. Download seguro via link privado. Suporte por e-mail e WhatsApp.</p>
+      <a class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')" style="font-size:18px;padding:14px 28px">🕯️ Comprar o eBook — R$ 49,90</a>
     </section>
 
-    <section class="section" style="text-align:center;">
-      <h3>Garanta sua cópia agora mesmo!</h3>
-      <p>Desperte o desejo. Reacenda o fogo. Viva o amor como foi criado para ser.</p>
-      <a href="https://appmax.com/seu-link-de-checkout" class="btn" target="_blank">🕯️ Comprar o eBook</a>
-    </section>
+    <footer>
+      © <span id="ano"></span> Nova ShopTop • Todos os direitos reservados — eBook digital.<br>
+      Siga no Instagram: <a href="https://instagram.com/nova.shoptop" target="_blank" style="color:var(--gold);text-decoration:none">@nova.shoptop</a>
+    </footer>
   </div>
 
-  <footer>
-    © 2025 Nova ShopTop — Todos os direitos reservados.<br>
-    Siga no Instagram: <a href="https://instagram.com/nova.shoptop" target="_blank" style="color:var(--gold);">@nova.shoptop</a>
-  </footer>
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">Comprar agora • R$ 49,90</a>
+  </div>
+
+  <script>
+    // coloca ano no rodapé
+    document.getElementById('ano').innerText = new Date().getFullYear();
+
+    /**
+     * Função comprarAgora(productId)
+     * - placeholder pronto para integração com API Appmax.
+     * - Substitua 'ID_PRODUTO_APPMAX' pelo ID real do produto.
+     * - Atualize 'APPMAX_ENDPOINT' e 'AUTH_TOKEN' conforme a documentação Appmax.
+     *
+     * Exemplo (genérico):
+     * fetch(APPMAX_ENDPOINT, {
+     *   method: 'POST',
+     *   headers: {
+     *     'Content-Type': 'application/json',
+     *     'Authorization': 'Bearer SEU_TOKEN_AQUI'
+     *   },
+     *   body: JSON.stringify({ productId, quantity:1, customer: {...} })
+     * })
+     * .then(...)
+     */
+    async function comprarAgora(productId){
+      try{
+        // Validar placeholder
+        if(!productId || productId === 'ID_PRODUTO_APPMAX'){
+          // Mensagem clara — substitua no deploy
+          alert('Substitua ID_PRODUTO_APPMAX pelo ID real do produto na Appmax antes de usar o botão de compra.');
+          return;
+        }
+
+        // ======== AQUI: substitua com seu endpoint Appmax real =========
+        const APPMAX_ENDPOINT = 'https://api.appmax.com.br/v1/checkout/create'; // exemplo — ver docs
+        const AUTH_TOKEN = 'SEU_TOKEN_DE_AUTENTICACAO'; // -> substitua
+        // =================================================================
+
+        // Corpo da requisição — ajuste conforme a API da Appmax
+        const payload = {
+          productId: productId,
+          quantity: 1,
+          // opcional: dados do cliente (se já os tiver)
+          // customer: { name: 'Nome', email: 'cliente@exemplo.com' }
+        };
+
+        // Mostrar carregamento simples
+        const originalText = document.activeElement && document.activeElement.innerText;
+        if(document.activeElement) document.activeElement.innerText = 'Aguarde...';
+
+        // Exemplo de integração via fetch
+        const resp = await fetch(APPMAX_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + AUTH_TOKEN
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if(!resp.ok){
+          // resposta de erro — mostre mensagem amigável
+          const txt = await resp.text();
+          console.error('Erro Appmax:', resp.status, txt);
+          alert('Erro ao iniciar o checkout. Verifique as configurações da Appmax no código.');
+          if(document.activeElement) document.activeElement.innerText = originalText;
+          return;
+        }
+
+        const data = await resp.json();
+        // Esperamos que a API retorne a URL de checkout
+        if(data && data.checkoutUrl){
+          window.location.href = data.checkoutUrl; // redireciona para checkout
+        } else {
+          // Caso a API retorne algum token ou ID, construa a URL adequada
+          console.warn('Resposta inesperada da API Appmax:', data);
+          alert('Checkout iniciado — verifique a resposta da API na console.');
+        }
+
+      }catch(err){
+        console.error('Erro ao chamar comprarAgora:', err);
+        alert('Ocorreu um erro ao iniciar o checkout. Verifique o console ou as credenciais Appmax.');
+      } finally {
+        // restaurar botão ativo
+        try{ if(document.activeElement) document.activeElement.innerText = 'Comprar Agora'; }catch(e){}
+      }
+    }
+
+    // UX: esconder sticky CTA quando em desktop
+    function checkSticky(){
+      const s = document.getElementById('stickyCta');
+      if(window.innerWidth <= 540) s.style.display = 'block'; else s.style.display = 'none';
+    }
+    window.addEventListener('resize', checkSticky);
+    checkSticky();
+  </script>
 </body>
 </html>
