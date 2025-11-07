@@ -27,7 +27,6 @@
       line-height:1.45;
     }
 
-    /* layout */
     .wrap{max-width:1100px;margin:28px auto;padding:28px;}
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
     .brand{display:flex;gap:12px;align-items:center}
@@ -40,7 +39,6 @@
     nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-weight:600}
     nav a.cta{background:linear-gradient(90deg,var(--gold),var(--red));color:#080808;padding:10px 16px;border-radius:10px;}
 
-    /* hero */
     .hero{
       display:grid;grid-template-columns: 1fr 1fr;gap:32px;align-items:center;margin-top:8px;
       background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0));
@@ -62,26 +60,22 @@
     .btn:hover{transform:translateY(-4px)}
     .mini-cta{display:inline-block;margin-left:14px;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);text-decoration:none}
 
-    /* side content */
     .benefits{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px}
     .benefits h3{color:var(--gold);margin:0 0 10px}
     .list{margin-top:8px}
     .list p{margin:8px 0;color:var(--muted)}
 
-    /* persuasive blocks */
     .blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
     .block{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
     .block h4{color:var(--gold);margin-bottom:8px}
     .block p{color:var(--muted);font-size:15px}
 
-    /* testimonials */
     .testimonials{margin-top:26px;padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
     .testimonials h3{color:var(--gold);margin-bottom:12px}
     .quote{font-style:italic;color:#e8e0d6;margin-bottom:8px}
 
     footer{margin-top:36px;text-align:center;color:rgba(255,255,255,0.5);font-size:14px;padding-bottom:30px}
 
-    /* sticky CTA at bottom for mobile */
     .sticky-cta{display:none;position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(90deg,var(--gold),var(--red));padding:12px;border-radius:999px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,0.6)}
     .sticky-cta a{color:#080808;font-weight:800;text-decoration:none}
 
@@ -118,24 +112,34 @@
       </nav>
     </header>
 
+    <!-- Imagem destacada no topo -->
+    <div style="
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  display:flex;justify-content:center;align-items:center;
+">
+  <img 
+    src="https://raw.githubusercontent.com/novashoptop/novashoptop/main/imagems1.png"
+    alt="Capa do eBook O Livro Proibido de Cantares"
+    style="width:100%;height:auto;object-fit:cover;display:block;"
+  />
+</div>
+
+
     <!-- HERO -->
     <section class="hero" aria-labelledby="produto-titulo">
       <div class="hero-left">
         <div class="eyebrow">Edição Especial • Limitada</div>
-
-        <!-- COVER: embutida em base64 -->
-        <img 
-  class="cover" 
-  alt="Capa do eBook O Livro Proibido de Cantares" 
-  src="https://drive.google.com/uc?export=view&id=1wu5Az6LvP1Rh06g56F99HMgLvLVZoije"
-/>
         <h1 id="produto-titulo">O livro proibido de Cantares:<br /><span style="font-weight:800">explícito para o casamento — desejo, sexo e fogo!</span></h1>
 
         <p class="subtitle">Um texto ousado que reconecta paixão e espiritualidade — um convite para casais que querem viver a intimidade em sua forma mais poderosa.</p>
 
         <div class="price">R$ 49,90</div>
 
-        <!-- Top CTA (id usado como ancoragem) -->
         <div style="margin-top:14px">
           <a id="comprar-top" class="btn" href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">🔥 Comprar Agora</a>
           <a class="mini-cta" href="#porque">Saiba mais</a>
@@ -157,7 +161,6 @@
       </aside>
     </section>
 
-    <!-- Persuasive blocks -->
     <div class="blocks" aria-hidden="false">
       <div class="block" id="porque">
         <h4>Desejo redescoberto</h4>
@@ -178,15 +181,13 @@
       </div>
     </div>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="depoimentos" aria-labelledby="depoimentos">
+    <section class="testimonials" id="depoimentos">
       <h3>Depoimentos</h3>
       <div class="quote">"Leitura intensa — resgatou nossa intimidade e trouxe diálogo ao casamento." — M. & J.</div>
       <div class="quote">"Um olhar poético e sagrado sobre o desejo — recomendo a todos os casais." — Aline R.</div>
       <p style="color:var(--muted);font-size:13px;margin-top:8px">Depoimentos reais de leitores. Resultados variam conforme dedicação e aplicação dos exercícios.</p>
     </section>
 
-    <!-- Final CTA / guarantee -->
     <section style="margin-top:20px;text-align:center">
       <h3 style="color:var(--gold)">Garanta sua cópia — Edição digital</h3>
       <p style="color:var(--muted);max-width:720px;margin:8px auto 16px">Receba o eBook instantaneamente após a compra. Download seguro via link privado. Suporte por e-mail e WhatsApp.</p>
@@ -199,59 +200,25 @@
     </footer>
   </div>
 
-  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" id="stickyCta">
     <a href="#" onclick="event.preventDefault(); comprarAgora('ID_PRODUTO_APPMAX')">Comprar agora • R$ 49,90</a>
   </div>
 
   <script>
-    // coloca ano no rodapé
     document.getElementById('ano').innerText = new Date().getFullYear();
 
-    /**
-     * Função comprarAgora(productId)
-     * - placeholder pronto para integração com API Appmax.
-     * - Substitua 'ID_PRODUTO_APPMAX' pelo ID real do produto.
-     * - Atualize 'APPMAX_ENDPOINT' e 'AUTH_TOKEN' conforme a documentação Appmax.
-     *
-     * Exemplo (genérico):
-     * fetch(APPMAX_ENDPOINT, {
-     *   method: 'POST',
-     *   headers: {
-     *     'Content-Type': 'application/json',
-     *     'Authorization': 'Bearer SEU_TOKEN_AQUI'
-     *   },
-     *   body: JSON.stringify({ productId, quantity:1, customer: {...} })
-     * })
-     * .then(...)
-     */
     async function comprarAgora(productId){
       try{
-        // Validar placeholder
         if(!productId || productId === 'ID_PRODUTO_APPMAX'){
-          // Mensagem clara — substitua no deploy
           alert('Substitua ID_PRODUTO_APPMAX pelo ID real do produto na Appmax antes de usar o botão de compra.');
           return;
         }
 
-        // ======== AQUI: substitua com seu endpoint Appmax real =========
-        const APPMAX_ENDPOINT = 'https://api.appmax.com.br/v1/checkout/create'; // exemplo — ver docs
-        const AUTH_TOKEN = 'SEU_TOKEN_DE_AUTENTICACAO'; // -> substitua
-        // =================================================================
+        const APPMAX_ENDPOINT = 'https://api.appmax.com.br/v1/checkout/create';
+        const AUTH_TOKEN = 'SEU_TOKEN_DE_AUTENTICACAO';
 
-        // Corpo da requisição — ajuste conforme a API da Appmax
-        const payload = {
-          productId: productId,
-          quantity: 1,
-          // opcional: dados do cliente (se já os tiver)
-          // customer: { name: 'Nome', email: 'cliente@exemplo.com' }
-        };
+        const payload = { productId: productId, quantity: 1 };
 
-        // Mostrar carregamento simples
-        const originalText = document.activeElement && document.activeElement.innerText;
-        if(document.activeElement) document.activeElement.innerText = 'Aguarde...';
-
-        // Exemplo de integração via fetch
         const resp = await fetch(APPMAX_ENDPOINT, {
           method: 'POST',
           headers: {
@@ -262,37 +229,29 @@
         });
 
         if(!resp.ok){
-          // resposta de erro — mostre mensagem amigável
           const txt = await resp.text();
           console.error('Erro Appmax:', resp.status, txt);
-          alert('Erro ao iniciar o checkout. Verifique as configurações da Appmax no código.');
-          if(document.activeElement) document.activeElement.innerText = originalText;
+          alert('Erro ao iniciar o checkout. Verifique as configurações da Appmax.');
           return;
         }
 
         const data = await resp.json();
-        // Esperamos que a API retorne a URL de checkout
         if(data && data.checkoutUrl){
-          window.location.href = data.checkoutUrl; // redireciona para checkout
+          window.location.href = data.checkoutUrl;
         } else {
-          // Caso a API retorne algum token ou ID, construa a URL adequada
-          console.warn('Resposta inesperada da API Appmax:', data);
-          alert('Checkout iniciado — verifique a resposta da API na console.');
+          console.warn('Resposta inesperada:', data);
+          alert('Verifique a resposta da API Appmax.');
         }
 
       }catch(err){
         console.error('Erro ao chamar comprarAgora:', err);
-        alert('Ocorreu um erro ao iniciar o checkout. Verifique o console ou as credenciais Appmax.');
-      } finally {
-        // restaurar botão ativo
-        try{ if(document.activeElement) document.activeElement.innerText = 'Comprar Agora'; }catch(e){}
+        alert('Ocorreu um erro ao iniciar o checkout.');
       }
     }
 
-    // UX: esconder sticky CTA quando em desktop
     function checkSticky(){
       const s = document.getElementById('stickyCta');
-      if(window.innerWidth <= 540) s.style.display = 'block'; else s.style.display = 'none';
+      s.style.display = (window.innerWidth <= 540) ? 'block' : 'none';
     }
     window.addEventListener('resize', checkSticky);
     checkSticky();
